@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Cadastro(models.Model):
+    """
+    Esta classe cria o cadastro dos usuários
+    """
     nome = models.CharField(
         'Usuário',
         max_length=40,

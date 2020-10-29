@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 
 class Cadastro(models.Model):
     """
@@ -19,6 +19,7 @@ class Cadastro(models.Model):
     )
     data_nasc = models.DateField(
         'Data de nascimento',
+        default=timezone.now,
     )
     fone = models.CharField(
         'Telefone',
@@ -41,15 +42,18 @@ class Recarga(models.Model):
     )
     data_recarga = models.DateField(
         'Data',
+        default=timezone.now,
     )
     saldo_atual = models.DecimalField(
         decimal_places=2,
         max_digits=6,
+        default=0.0,
     )
     valor_recarga = models.DecimalField(
         'Valor da recarga',
         decimal_places=2,
         max_digits=6,
+        default=0.0,
     )
 
 
@@ -65,4 +69,5 @@ class Utilizacao(models.Model):
         'Valor',
         decimal_places=2,
         max_digits=6,
+        default=0.0,
     )

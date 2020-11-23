@@ -1,10 +1,17 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Cadastro(models.Model):
     """
     Esta classe cria o cadastro dos usuários
     """
+    class Meta:
+        verbose_name = 'Cadastro'
+        verbose_name_plural = 'Cadastros'
+
+    def __str__(self):
+        return self.nome
     nome = models.CharField(
         'Usuário',
         max_length=40,
@@ -36,6 +43,9 @@ class Cadastro(models.Model):
 
 
 class Recarga(models.Model):
+    class Meta:
+        verbose_name = 'Recarga'
+        verbose_name_plural = 'Recargas'
     usuario = models.ForeignKey(
         Cadastro,
         on_delete=models.CASCADE, blank=True, null=True,
@@ -58,8 +68,12 @@ class Recarga(models.Model):
 
 
 class Utilizacao(models.Model):
+    class Meta:
+        verbose_name = 'Utilização'
+        verbose_name_plural = 'Utilizações'
     usuario = models.ForeignKey(
         Cadastro,
+
         on_delete=models.CASCADE, blank=True, null=True,
     )
     alters_data = models.DateField(

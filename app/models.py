@@ -6,12 +6,14 @@ class Cadastro(models.Model):
     """
     Esta classe cria o cadastro dos usuários
     """
+
     class Meta:
         verbose_name = 'Cadastro'
         verbose_name_plural = 'Cadastros'
 
     def __str__(self):
         return self.nome
+
     nome = models.CharField(
         'Usuário',
         max_length=40,
@@ -46,6 +48,10 @@ class Recarga(models.Model):
     class Meta:
         verbose_name = 'Recarga'
         verbose_name_plural = 'Recargas'
+
+    def __str__(self):
+        return self.usuario.nome + ' - R$ ' + str(self.saldo_atual)
+
     usuario = models.ForeignKey(
         Cadastro,
         on_delete=models.CASCADE, blank=True, null=True,
@@ -66,11 +72,17 @@ class Recarga(models.Model):
         default=0.0,
     )
 
+    def save(self, *args, **kwargs):
+        # Saldo atual <-- 100,00, adicionei valor da recarga mais 50,00, então o saldo atual deve ser 150,00
+        self.saldo_atual = self.saldo_atual + self.valor_recarga
+        super().save(*args, **kwargs)
+
 
 class Utilizacao(models.Model):
     class Meta:
         verbose_name = 'Utilização'
         verbose_name_plural = 'Utilizações'
+
     usuario = models.ForeignKey(
         Cadastro,
 
@@ -85,3 +97,11 @@ class Utilizacao(models.Model):
         max_digits=6,
         default=0.0,
     )
+
+    def save(self, *args, **kwargs):
+        # Busque em recarga o usuário que eu escolhi em Utilização
+        recarga = Recarga.objects.get(usuario=self.usuario)
+        recarga.saldo_atual = recarga.saldo_atual - self.valor
+        recarga.save()
+
+        super().save(*args, **kwargs)

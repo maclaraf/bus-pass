@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalize seu cadastro</title>
+</head>
+<body>
+{{ form.as_p }}
+
+<form method="post" action="/criar_usuario/">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>{{ form_user.username.label_tag }}</td>
+            <td>{{ form_user.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_user.password1.label_tag }}</td>
+            <td>{{ form_user.password1 }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_user.password2.label_tag }}</td>
+            <td>{{ form_user.password2 }}</td>
+        </tr>
+    </table>
+    <input type="submit" value="Ok"/>
+</form>
+</body>
+</html>

@@ -8,3 +8,4 @@ db.sqlite3
 /app/migrations/
 /env/
 /.idea/
+/functional_testes/geckodriver.log

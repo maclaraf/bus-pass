@@ -6,7 +6,6 @@ from .models import Utilizacao
 
 admin.site.register(Cadastro)
 
-
 # admin.site.register(Utilizacao)
 @admin.register(Utilizacao)
 class UtilizacaoAdmin(admin.ModelAdmin):

@@ -5,13 +5,12 @@
     <title>Cadastro</title>
 </head>
 <body>
-<h1>BussPass</h1>
+<h1 id="cabecalho">Cadastro</h1>
 <h2>Cadastrar passe</h2>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Submit">
 </form>
-
 </body>
 </html>

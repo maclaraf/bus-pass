@@ -1,0 +1,87 @@
+body{
+ background-color: #ffce5e;
+  background-repeat: inherit;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: space;
+  height: cover;
+  font-size: 22px;
+  background-position: fixed;
+  animation-duration: 60s;
+  width: 100px;
+  height: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif ;
+  color: white;
+
+}
+
+.box.h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 30px;
+
+}
+
+.box{
+  width: 200px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(59, 58, 58);
+  text-align: center;
+  border-radius: 23px;
+}
+
+.box input[type="text"], .box input[type="senha"]{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+  border: 1.5px solid white;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  transition: 0.30s;
+  font-size: 14px;
+  border-radius: 30px;
+
+}
+
+.box input[type="text"], .box input[type="password"]:focus{
+  width: 200px;
+  border-color: rgb(255, 255, 255)
+}
+
+.box input[type="submit"]{
+  border:0;
+  background:none;
+  display:block;
+  margin:20px auto;
+  text-align:center;
+  color:white;
+  border:1.5px solid white;
+  padding:14px 40px;
+  outline:none;
+  transition:0.30s;
+  font-size:14px;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.box input[type="submit"]:houver{
+  background: rgb(247, 36, 36);
+
+}

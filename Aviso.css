@@ -1,0 +1,38 @@
+body{
+  background-image: url(https://imgur.com/xymw7oC.gif);
+  background-size:100%;
+  background-repeat:repeat-y;
+  background-attachment:fixed;
+  height:100%;
+  width:100%;
+  
+}
+
+a.classe1{
+  
+  color: #FFFFFF;
+  background-color:#363636;
+  line-height: center;
+  font-family: Helvetica, sans-serif ;
+  text-align: center;
+  margin-left: 500;
+  margin-right:500;
+  display: inline;
+  background-position:fixed;
+  font-size:55px;
+  
+}
+h1{
+  color: #FFFFFF;
+  background-color:#363636;
+  line-height: center;
+  font-family: Helvetica, sans-serif ;
+  text-align: center;
+  margin-left: 350;
+  margin-right:400;
+  display: inline;
+  background-position:fixed;
+  font-size:40px;
+}
+
+

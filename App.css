@@ -1,0 +1,50 @@
+body{
+ background-color: #ffce5e;
+  background-repeat: inherit;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: space;
+  height: cover;
+  font-size: 22px;
+  background-position: fixed;
+  animation-duration: 60s;
+  width: 100px;
+  height: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif ;
+  color: white;
+
+}
+a.classe1{
+  color: #FFFFFF;
+  background-color:#363636;
+  line-height: center;
+  font-family: Helvetica, sans-serif ;
+  text-align: center;
+  margin-left: 500;
+  margin-right:500;
+  display: inline;
+  font-size:55px;
+  
+  
+}
+a.classe2{
+  color: #FFFFFF;
+  background-color:#363636;
+  line-height: center;
+  font-family: Helvetica, sans-serif ;
+  text-align: center;
+  margin-left: 500;
+  margin-right:500;
+  display: inline;
+  font-size:55px;
+  
+  
+}

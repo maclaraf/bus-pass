@@ -1,0 +1,32 @@
+body{
+  background-image: url("https://imgur.com/kGRSbaO.png");
+  background-repeat: inherit;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: space;
+  height: cover;
+  font-size: 22px;
+  background-position: fixed;
+  animation-duration: 60s;
+  width: 100px;
+  height: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  
+}
+
+
+a.classe1{
+  color: #FFFFFF;
+  background-color:#363636;
+  line-height: center;
+  font-family: Helvetica, sans-serif ;
+  text-align: center;
+  margin-left: 500;
+  margin-right:500;
+  display: inline;
+  background-position:fixed;
+  font-size:55px;
+  
+  
+}
